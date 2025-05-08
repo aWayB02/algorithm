@@ -1,9 +1,3 @@
-"""
-04.04.2024
-DSA g1
-"""
-
-
 class Node:
 
     def __init__(self, val, next=None):
@@ -54,8 +48,16 @@ root = LinkedList()
 root.append(1)
 root.append(2)
 root.append(3)
-root.display()
-root.prepend(5)
-root.display()
-root.prepend(6)
-root.display()
+root.append(4)
+root.append(5)
+
+
+def travel(node: Node):
+
+    if node is None:
+        return
+    
+    print(node.val)
+    travel(node.next)
+
+travel(root.head)
