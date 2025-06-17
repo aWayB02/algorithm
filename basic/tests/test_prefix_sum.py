@@ -3,7 +3,7 @@ from src.algorithms.pref_sum import PrefixSum
 
 
 @pytest.fixture()
-def getPrefix():
+def get_prefix():
     nums = [10, 20, 30, 40, 50]
     return PrefixSum(nums)
 
@@ -22,5 +22,5 @@ class TestPrefixSum:
             (3, 5, 120),
         ],
     )
-    def testSum(self, getPrefix: PrefixSum, l, r, expected):
-        assert getPrefix.sum(l, r) == expected
+    def test_sum(self, getPrefix: PrefixSum, l, r, expected):
+        assert getPrefix.prefix_sum(l, r) == expected
